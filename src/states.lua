@@ -1,11 +1,18 @@
-local enum = require("src.enum")
+local function enum(values)
+    local e = {}
+    for i, v in ipairs(values) do
+        e[v] = i
+    end
+    return e
+end
 
-local States = {}
-
-States.GameStates = enum({
+local GameStates = enum({
     "StartScreen",
     "Game",
     "Statistics"
 })
 
-return States
+return {
+    GameStates = GameStates
+}
+
