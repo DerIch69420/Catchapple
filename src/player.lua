@@ -1,16 +1,9 @@
 local love = require("love")
 
---- @class Player
---- @field x number
---- @field y number
---- @field speed number
---- @field width number
---- @field height number
 local Player = {}
 Player.__index = Player
 
 --- Create a new Player instance
---- @return Player
 function Player.new()
     local self = setmetatable({}, Player)
     self.x = 50
@@ -28,8 +21,6 @@ function Player:draw()
 end
 
 --- Move the player within screen bounds
---- @param dx number Movement direction (-1 for left, 1 for right)
---- @param dt number Delta time
 function Player:move(dx, dt)
     self.x = self.x + dx * self.speed * dt
 

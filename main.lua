@@ -1,5 +1,3 @@
--- main.lua
-
 local love = require("love")
 
 local game = require("src.states")

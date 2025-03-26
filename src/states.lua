@@ -1,5 +1,3 @@
--- states.lua
-
 local enum = require("src.enum")
 
 local States = {}
